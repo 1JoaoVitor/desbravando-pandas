@@ -24,16 +24,11 @@ df_transacao
 
 # %%
 
-df_transacao.merge(df_user,
-                   how='left',
-                   left_on=['id_user'],
-                   right_on=['id'],                   
-                   )
-
-# %%
-
-df_transacao.merge(df_user,
-                   how='inner',
-                   left_on=['id_user'],
-                   right_on=['id'],                   
-                   )
+df_transacao.merge(df_user, how="left",
+                    left_on = "id_user", 
+                    right_on = "id") #left join do sql 
+ # %%
+df_transacao.merge(df_user, how="right",
+                    left_on = "id_user", 
+                    right_on = "id") #right join do sql 
+    # %%

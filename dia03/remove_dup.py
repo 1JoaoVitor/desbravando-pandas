@@ -7,12 +7,14 @@ data = {
     "updated_at":[1,2,3,1,2,3]
 }
 
-
 # %%
+
 df = pd.DataFrame(data)
 
-df = (df.sort_values(by="updated_at", ascending=False)
-        .drop_duplicates(subset=["Nome", "Idade"], keep='first'))
+df = (df.sort_values(by = 'updated_at', ascending= False).drop_duplicates(subset=["Nome", "Idade"], keep = "first"))
 
 df
+
+#primeiro ordenando os valores por "data de atualização" 
+#para dps tirar os valores duplicados que aparecerem por final, mantendo as primeiras aparições
 # %%

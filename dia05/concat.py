@@ -11,7 +11,7 @@ data_01 = {
 df_01 = pd.DataFrame(data_01)
 df_01
 
-# %%
+    # %%
 
 data_02 = {
     "id": [5,6,7,8],
@@ -24,17 +24,28 @@ df_02
 
 # %%
 
-pd.concat([df_01, df_02]).reset_index(drop=True)
-
+pd.concat([df_01, df_02], axis=0).reset_index(drop=True)
+#passa uma lista de objetos (no caso os df)
+# arruma o index e descarta (com o drop) a antiga coluna de index
+# junção de datasets "na vertical", empilhar
 # %%
 
 data_03 = {
-    "sobrenome":["Calvo", "Silva", "Costa", "Souza"],
-    "renda": [3100, 3100, 3200, 3200]
+    "sobrenome":["calvo", "silva", "costa", "souza"],
+    "renda" : [3100, 3100, 3200, 3200]
 }
-df_03 = pd.DataFrame(data_03).sort_values(['renda','sobrenome'], ascending=[False, True])
-
+df_03 = pd.DataFrame(data_03)
 df_03
 # %%
 
 pd.concat([df_01, df_03], axis=1)
+# %%
+
+df_03 = pd.DataFrame(data_03).sort_values(["renda", "sobrenome"], 
+                                          ascending=[False, True])
+df_03
+# %%
+
+pd.concat([df_01, df_03], axis=1)
+# ele ordenou automaticamente pelo index
+# %%
