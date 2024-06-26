@@ -26,7 +26,7 @@ df_transacao
 
 df_transacao.merge(df_user, how="left",
                     left_on = "id_user", 
-                    right_on = "id") #left join do sql 
+                    right_on = "id") #left join do sql, left_on é a chave do df da esquerda e right_on da direita
  # %%
 df_transacao.merge(df_user, how="right",
                     left_on = "id_user", 

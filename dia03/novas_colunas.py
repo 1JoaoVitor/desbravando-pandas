@@ -92,6 +92,6 @@ df_crm.apply(rfv, axis=1)
 # (ao invés de cada valor na coluna), portanto precisa se modificar dentro da função
 # para coisas como rfw["Name"]
 # rfv = linha 1: 0	Teo	1	100	2, rfv["Name"] = Teo
-# axis = eixo, ou seja, aplicando as as linhas para serem "avaliadas"
+# axis = eixo, ou seja, aplicando as linhas para serem "avaliadas" (axis = 0 seria colunas)
 
 # %%

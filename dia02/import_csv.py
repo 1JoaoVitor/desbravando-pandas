@@ -7,6 +7,7 @@ df_customers
 
 
 df_customers.info(memory_usage='deep')
+# pra saber o uso de memória do df
 # %%
 
 df_customers.columns
@@ -26,6 +27,7 @@ df_2
 # %%
 df_2["Points"] = df_2["Points"] + 1000
 df_2
+# soma toda a linha do df
 # %%
 
 

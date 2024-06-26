@@ -17,7 +17,7 @@ df_stack = df.stack().reset_index().rename(columns={"level_3":"Tipo Homicidio",
 
 #%%
 df_unstack = (df_stack.set_index(['cod','nome','período', 'Tipo Homicidio'])
-                      .unstack() # tem que passar todos os indices menos o valor
+                      .unstack() # tem que passar todos os indices menos o 'valor', pois queremos manter
                       .reset_index())
 # fazendo o processo inverso, mas fica visualmente ruim
 # %%
@@ -28,7 +28,7 @@ homicidios = df_unstack['Qtde'].columns.tolist()
 df_unstack.columns = ["cod", "nome", "período"] + homicidios # "forçando" as colunas do df 
 df_unstack
 
-# pode ser feito com drop level
+# pode ser feito com drop level:
 
 """indentificadores = df_unstack.columns.droplevel(1).tolist()[:3] 
 df_unstack.columns = indentificadores + homicidios

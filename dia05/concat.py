@@ -27,7 +27,7 @@ df_02
 pd.concat([df_01, df_02], axis=0).reset_index(drop=True)
 #passa uma lista de objetos (no caso os df)
 # arruma o index e descarta (com o drop) a antiga coluna de index
-# junção de datasets "na vertical", empilhar
+# junção de datasets "na vertical", empilhar (axis = 1 seria na horizontal)
 # %%
 
 data_03 = {

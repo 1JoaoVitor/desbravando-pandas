@@ -17,5 +17,5 @@ df
 
 # Outro jeito 
 
-df.rename(columns={"Name" : "Nome", "Discription" : "Descrição"}, inplace=True)
+df.rename(columns={"Name" : "Nome", "Discription" : "Descrição"}, inplace=True) # desse jeito não precisa reatribuir para o df, ele já atualiza
 # %%

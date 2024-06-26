@@ -15,7 +15,7 @@ df_user["Points"].sum()
 
 
 df_summary = df.groupby(["IdCustomer"])["Points"].sum().sort_values(ascending= False)
-# agrupa os dados por determinada coluna considerando determinada outra tabela
+# agrupa os dados por determinada coluna considerando determinada outra coluna 
 # no caso agrupa os clientes pela pontos usando a soma 
 # depois disso ordena a coluna da soma 
 # %%
